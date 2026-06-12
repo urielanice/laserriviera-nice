@@ -18,4 +18,12 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/greffe-de-cheveux-nice.html"/>
   </url>
 
+  <url>
+    <loc>https://laserriviera-nice.fr/blog/epilation-laser-nice</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/blog/epilation-laser-nice"/>
+  </url>
+
 </urlset>
