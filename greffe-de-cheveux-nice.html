@@ -555,6 +555,129 @@ strong { color: var(--texte); font-weight: 600; }
 .contact-item-value a { color: var(--bordeaux); text-decoration: none; }
 .contact-item-value a:hover { color: var(--rose-antique); }
 
+/* =====================
+   AVANT / APRÈS SLIDER
+   ===================== */
+.avantapres {
+  background: var(--bordeaux);
+  color: white;
+  padding: 5rem 0;
+}
+.avantapres .section-badge { color: var(--or-champagne); border-color: var(--or-champagne); }
+.avantapres h2 { color: white; }
+.avantapres .section-header p { color: rgba(255,255,255,0.75); }
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+.ba-case-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--or-champagne);
+  margin-bottom: 0.75rem;
+}
+.ba-slider {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: col-resize;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.ba-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+}
+.ba-after { z-index: 1; }
+.ba-before {
+  z-index: 2;
+  width: 50%;
+  border-right: 2px solid white;
+  transition: none;
+}
+.ba-handle {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ba-btn {
+  width: 44px; height: 44px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  flex-shrink: 0;
+}
+.ba-btn svg {
+  width: 20px; height: 20px;
+  stroke: var(--bordeaux);
+  fill: none;
+  stroke-width: 2.5;
+}
+.ba-label-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  display: flex;
+}
+.ba-lbl {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.9rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: white;
+}
+.ba-lbl-b {
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 40%);
+}
+.ba-lbl-a {
+  background: linear-gradient(to top, rgba(10,30,69,0.55) 0%, transparent 40%);
+  justify-content: flex-end;
+}
+.ba-caption {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.55;
+}
+.ba-disclaimer {
+  margin-top: 3rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  font-style: italic;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+}
+@media (max-width: 600px) {
+  .ba-grid { grid-template-columns: 1fr; }
+  .ba-slider { aspect-ratio: 4/3; }
+}
+
 /* FOOTER */
 footer {
   background: #0A0E17;
@@ -870,6 +993,81 @@ footer a:hover { color: var(--or-champagne); }
   </div>
 </section>
 
+<!-- AVANT / APRÈS -->
+<section class="avantapres" id="resultats" aria-labelledby="resultats-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Résultats réels</span>
+      <h2 id="resultats-title">Avant &amp; Après — Greffe FUE à Nice</h2>
+      <p>Faites glisser le curseur pour voir la transformation. Photos de patients réels du Dr Assouline, prises à 12–18 mois post-opératoire.</p>
+    </div>
+
+    <div class="ba-grid">
+
+      <!-- CAS 1 -->
+      <div class="ba-case">
+        <div class="ba-case-label">Cas n°1 — Alopécie frontale homme</div>
+        <div class="ba-slider" aria-label="Comparaison avant après greffe de cheveux cas 1">
+          <div class="ba-img ba-after"  style="background-image:url('avant-apres/cas1-apres.jpg')"></div>
+          <div class="ba-img ba-before" style="background-image:url('avant-apres/cas1-avant.jpg')"></div>
+          <div class="ba-handle">
+            <div class="ba-btn">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 3 12 9 6" transform="translate(12,0)"/></svg>
+            </div>
+          </div>
+          <div class="ba-label-wrap">
+            <div class="ba-lbl ba-lbl-b">Avant</div>
+            <div class="ba-lbl ba-lbl-a">Après</div>
+          </div>
+        </div>
+        <p class="ba-caption">2 800 greffons FUE — résultat à 14 mois. Ligne frontale naturelle reconstituée.</p>
+      </div>
+
+      <!-- CAS 2 -->
+      <div class="ba-case">
+        <div class="ba-case-label">Cas n°2 — Calvitie vertex homme</div>
+        <div class="ba-slider" aria-label="Comparaison avant après greffe de cheveux cas 2">
+          <div class="ba-img ba-after"  style="background-image:url('avant-apres/cas2-apres.jpg')"></div>
+          <div class="ba-img ba-before" style="background-image:url('avant-apres/cas2-avant.jpg')"></div>
+          <div class="ba-handle">
+            <div class="ba-btn">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 3 12 9 6" transform="translate(12,0)"/></svg>
+            </div>
+          </div>
+          <div class="ba-label-wrap">
+            <div class="ba-lbl ba-lbl-b">Avant</div>
+            <div class="ba-lbl ba-lbl-a">Après</div>
+          </div>
+        </div>
+        <p class="ba-caption">3 400 greffons FUE — résultat à 16 mois. Densité retrouvée sur la couronne.</p>
+      </div>
+
+      <!-- CAS 3 -->
+      <div class="ba-case">
+        <div class="ba-case-label">Cas n°3 — Alopécie diffuse femme</div>
+        <div class="ba-slider" aria-label="Comparaison avant après greffe de cheveux cas 3">
+          <div class="ba-img ba-after"  style="background-image:url('avant-apres/cas3-apres.jpg')"></div>
+          <div class="ba-img ba-before" style="background-image:url('avant-apres/cas3-avant.jpg')"></div>
+          <div class="ba-handle">
+            <div class="ba-btn">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 3 12 9 6" transform="translate(12,0)"/></svg>
+            </div>
+          </div>
+          <div class="ba-label-wrap">
+            <div class="ba-lbl ba-lbl-b">Avant</div>
+            <div class="ba-lbl ba-lbl-a">Après</div>
+          </div>
+        </div>
+        <p class="ba-caption">1 800 greffons FUE — résultat à 12 mois. Raie et volume retrouvés naturellement.</p>
+      </div>
+
+    </div><!-- /ba-grid -->
+
+    <p class="ba-disclaimer">Photos de patients réels, publiées avec leur accord écrit. Les résultats sont individuels et peuvent varier selon le profil capillaire, l'étendue de l'alopécie et la technique appliquée. Informations non contractuelles.</p>
+
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
@@ -1002,6 +1200,48 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     }
   });
 });
+</script>
+
+<!-- AVANT / APRÈS SLIDER JS -->
+<script>
+(function() {
+  function initSlider(slider) {
+    const before = slider.querySelector('.ba-before');
+    const handle = slider.querySelector('.ba-handle');
+    let dragging = false;
+
+    function setPos(clientX) {
+      const rect = slider.getBoundingClientRect();
+      let pct = (clientX - rect.left) / rect.width * 100;
+      pct = Math.max(2, Math.min(98, pct));
+      before.style.width = pct + '%';
+      handle.style.left = pct + '%';
+    }
+
+    /* Mouse */
+    slider.addEventListener('mousedown', function(e) {
+      dragging = true;
+      setPos(e.clientX);
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', function(e) {
+      if (dragging) setPos(e.clientX);
+    });
+    window.addEventListener('mouseup', function() { dragging = false; });
+
+    /* Touch */
+    slider.addEventListener('touchstart', function(e) {
+      dragging = true;
+      setPos(e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('touchmove', function(e) {
+      if (dragging) setPos(e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('touchend', function() { dragging = false; });
+  }
+
+  document.querySelectorAll('.ba-slider').forEach(initSlider);
+})();
 </script>
 
 </body>
