@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://laserriviera-nice.fr/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/"/>
@@ -19,14 +19,6 @@
   </url>
 
   <url>
-    <loc>https://laserriviera-nice.fr/epilation-laser-homme-nice.html</loc>
-    <lastmod>2026-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/epilation-laser-homme-nice.html"/>
-  </url>
-
-  <url>
     <loc>https://laserriviera-nice.fr/detatouage-laser-nice.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -38,8 +30,16 @@
     <loc>https://laserriviera-nice.fr/hifu-nice.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/hifu-nice.html"/>
+  </url>
+
+  <url>
+    <loc>https://laserriviera-nice.fr/epilation-laser-homme-nice.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/epilation-laser-homme-nice.html"/>
   </url>
 
   <url>
@@ -48,6 +48,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/hydrafacial-nice.html"/>
+  </url>
+
+  <url>
+    <loc>https://laserriviera-nice.fr/led-luminotherapie-nice.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/led-luminotherapie-nice.html"/>
+  </url>
+
+  <url>
+    <loc>https://laserriviera-nice.fr/peeling-chimique-nice.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/peeling-chimique-nice.html"/>
+  </url>
+
+  <url>
+    <loc>https://laserriviera-nice.fr/microneedling-nice.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/microneedling-nice.html"/>
+  </url>
+
+  <url>
+    <loc>https://laserriviera-nice.fr/radiofrequence-nice.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/radiofrequence-nice.html"/>
+  </url>
+
+  <url>
+    <loc>https://laserriviera-nice.fr/ems-corps-nice.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/ems-corps-nice.html"/>
   </url>
 
 </urlset>
