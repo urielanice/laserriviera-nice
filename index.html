@@ -415,6 +415,56 @@ header.scrolled {
 }
 .nav-menu a:hover::after { width: 100%; }
 
+/* DROPDOWN SOINS */
+.has-dropdown { position: relative; }
+.has-dropdown > a { display: flex; align-items: center; gap: 4px; }
+.has-dropdown > a::after { display: none !important; }
+.dropdown-caret { font-size: 0.65rem; opacity: 0.6; transition: transform 0.2s; pointer-events: none; }
+.has-dropdown:hover .dropdown-caret { transform: rotate(180deg); }
+.dropdown-nav {
+  display: none;
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(44,24,16,0.14);
+  padding: 0.6rem 0;
+  min-width: 215px;
+  z-index: 9999;
+  border: 1px solid rgba(183,110,121,0.12);
+}
+.dropdown-nav::before {
+  content: '';
+  position: absolute;
+  top: -5px; left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px; height: 10px;
+  background: white;
+  border-left: 1px solid rgba(183,110,121,0.12);
+  border-top: 1px solid rgba(183,110,121,0.12);
+}
+.dropdown-nav li { list-style: none; }
+.dropdown-nav a {
+  display: block;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.84rem;
+  color: var(--bordeaux);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.12s, color 0.12s;
+}
+.dropdown-nav a:hover { background: var(--ivoire); color: var(--rose-antique); }
+.dropdown-nav a::after { display: none !important; }
+.has-dropdown:hover .dropdown-nav { display: block; }
+@media (max-width: 900px) {
+  .dropdown-nav { display: block !important; position: static; transform: none; box-shadow: none; border: none; padding: 0 0 0.5rem; background: transparent; border-radius: 0; }
+  .dropdown-nav::before { display: none; }
+  .dropdown-nav a { padding: 0.35rem 1.5rem; font-size: 0.82rem; color: var(--rose-antique); }
+  .dropdown-caret { display: none; }
+}
+
 .btn {
   display: inline-block;
   padding: 0.9rem 1.8rem;
@@ -1276,13 +1326,21 @@ footer {
     </a>
     <nav aria-label="Navigation principale">
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#services">Soins</a></li>
-        <li><a href="#epilation">Épilation</a></li>
-        <li><a href="#detatouage">Détatouage</a></li>
+        <li class="has-dropdown">
+          <a href="#services">Soins <span class="dropdown-caret">▾</span></a>
+          <ul class="dropdown-nav">
+            <li><a href="epilation-laser-homme-nice.html">Épilation Laser</a></li>
+            <li><a href="detatouage-laser-nice.html">Détatouage PicoLaser</a></li>
+            <li><a href="hifu-nice.html">HIFU — Lifting</a></li>
+            <li><a href="hydrafacial-nice.html">Hydrafacial Syndeo</a></li>
+            <li><a href="led-luminotherapie-nice.html">LED Luminothérapie</a></li>
+            <li><a href="peeling-chimique-nice.html">Peeling Chimique</a></li>
+            <li><a href="microneedling-nice.html">Microneedling</a></li>
+            <li><a href="radiofrequence-nice.html">Radiofréquence</a></li>
+            <li><a href="ems-corps-nice.html">EMS Corps</a></li>
+          </ul>
+        </li>
         <li><a href="greffe-de-cheveux-nice.html">Greffe Cheveux</a></li>
-        <li><a href="#hifu">HIFU</a></li>
-        <li><a href="#miradry">MiraDry</a></li>
-        <li><a href="#hydrafacial">Hydrafacial</a></li>
         <li><a href="#medecin">Médecin</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact" class="btn btn-primary nav-cta">Prendre RDV</a></li>
