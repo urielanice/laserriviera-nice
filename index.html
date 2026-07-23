@@ -98,10 +98,13 @@ header.scrolled { box-shadow:var(--ombre); }
   box-shadow:0 10px 40px rgba(44,24,16,0.14); padding:0.6rem 0; min-width:215px;
   z-index:9999; border:1px solid rgba(183,110,121,0.12);
 }
+/* Invisible bridge so moving the mouse from the link down to the menu doesn't lose hover in the 16px gap */
+.has-dropdown::after { content:''; position:absolute; top:100%; left:0; right:0; height:16px; }
 .dropdown-nav li { list-style:none; }
 .dropdown-nav a { display:block; padding:0.45rem 1.1rem; font-size:0.84rem; color:var(--bordeaux); font-weight:500; white-space:nowrap; transition:background 0.12s,color 0.12s; }
 .dropdown-nav a:hover { background:var(--ivoire); color:var(--rose-antique); }
-.has-dropdown:hover .dropdown-nav { display:block; }
+.has-dropdown:hover .dropdown-nav,
+.has-dropdown.open .dropdown-nav { display:block; }
 .btn { display:inline-block; padding:0.9rem 1.8rem; font-size:0.92rem; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; border-radius:50px; transition:all 0.3s; border:1px solid transparent; }
 .btn-primary { background:var(--rose-antique); color:white; box-shadow:0 4px 20px rgba(183,110,121,0.35); }
 .btn-primary:hover { background:var(--rose-profond); transform:translateY(-2px); }
@@ -119,6 +122,7 @@ header.scrolled { box-shadow:var(--ombre); }
   .nav-cta { display:none; }
   .dropdown-nav { display:block !important; position:static; transform:none; box-shadow:none; border:none; padding:0 0 0.5rem; background:transparent; border-radius:0; }
   .dropdown-nav a { padding:0.35rem 1.5rem; font-size:0.82rem; color:var(--rose-antique); }
+  .has-dropdown::after { content:none; }
 }
 
 /* HERO */
@@ -746,8 +750,28 @@ burger.addEventListener('click', () => {
   const open = navMenu.classList.toggle('open');
   burger.setAttribute('aria-expanded', open);
 });
-document.querySelectorAll('.nav-menu a').forEach(link => {
+document.querySelectorAll('.nav-menu a:not(.has-dropdown > a)').forEach(link => {
   link.addEventListener('click', () => { navMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); });
+});
+
+// Soins dropdown: click/tap toggle (works on touch, tablets, and as a fallback to hover on desktop)
+document.querySelectorAll('.has-dropdown').forEach(item => {
+  const trigger = item.querySelector('a');
+  trigger.setAttribute('aria-expanded', 'false');
+  trigger.addEventListener('click', e => {
+    e.preventDefault();
+    const isOpen = item.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', isOpen);
+  });
+});
+// Close the Soins dropdown when clicking anywhere outside it
+document.addEventListener('click', e => {
+  document.querySelectorAll('.has-dropdown.open').forEach(item => {
+    if (!item.contains(e.target)) {
+      item.classList.remove('open');
+      item.querySelector('a').setAttribute('aria-expanded', 'false');
+    }
+  });
 });
 
 // FAQ
