@@ -184,60 +184,16 @@ footer a:hover { color: var(--or-champagne); }
 .tarifs-table tr:last-child td { border-bottom: none; }
 .tarifs-table tr:nth-child(even) td { background: rgba(107,39,55,0.03); }
 .tarifs-table td strong { color: var(--texte); }
-
-/* nav soins ajoutée */
-.nav-links { display:flex; gap:1.2rem; flex-wrap:wrap; align-items:center; }
-.nav-links a { font-size:0.82rem; text-decoration:none; color:inherit; opacity:0.85; }
-.nav-links a:hover { opacity:1; text-decoration:underline; }
-.nav-links a[aria-current="page"] { font-weight:600; opacity:1; }
-@media (max-width: 900px) { .nav-links a:not(.nav-back) { display:none; } }
-.related { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1.5rem; }
-.related a { display:block; padding:1.1rem 1.2rem; border:1px solid rgba(0,0,0,0.08); border-radius:10px; text-decoration:none; color:inherit; background:#fff; transition:transform .2s, box-shadow .2s; }
-.related a:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.08); }
-.related a strong { display:block; margin-bottom:0.3rem; }
-.related a span { font-size:0.88rem; opacity:0.75; }
-.timeline { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.8rem; margin-top:1.5rem; }
-.timeline div { background:#fff; border-radius:10px; padding:1rem; border-top:3px solid currentColor; }
-.timeline b { display:block; font-size:1.05rem; margin-bottom:0.3rem; }
-.timeline p { font-size:0.88rem; margin:0; }
-.timeline div{color:var(--rose-antique);}
-.avantages li{display:block !important;position:relative;padding-left:1.6rem !important;}
-.avantages li::before{position:absolute;left:0;top:0.9rem;}
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Clinique Laser de la Riviera",
-      "item": "https://laserriviera-nice.fr/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Épilation laser Nice",
-      "item": "https://laserriviera-nice.fr/epilation-laser-nice.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Épilation laser homme",
-      "item": "https://laserriviera-nice.fr/epilation-laser-homme-nice.html"
-    }
-  ]
-}
-</script>
+<style>.logo-img{height:56px;width:auto;display:block}.nav-logo .logo-img{height:50px}.footer-brand .logo-img{height:90px;margin-bottom:12px}@media(max-width:700px){.logo-img{height:44px}}</style>
 </head>
 <body>
 
 <header>
   <div class="nav-wrapper">
-    <a href="/" class="logo">Clinique Laser<span>de la Riviera — Nice</span></a>
-    <nav class="nav-links" aria-label="Soins"><a href="/epilation-laser-nice.html">Épilation laser</a><a href="/epilation-laser-homme-nice.html" aria-current="page">Épilation laser homme</a><a href="/detatouage-laser-nice.html">Détatouage PicoLaser</a><a href="/greffe-de-cheveux-nice.html">Greffe de cheveux FUE</a><a href="/" class="nav-back">Tous les soins →</a></nav>
-    <a href="#contact" class="nav-cta">Prendre RDV</a>
+    <a href="/" class="logo"><img src="/logo-centre-laser-500.png" alt="Clinique de la Riviera – Centre Laser Nice" class="logo-img" width="440" height="164"></a>
+    <nav><a href="/" class="nav-back">← Retour au site</a></nav>
+    <a href="https://www.doctolib.fr/chirurgien-plastique/nice/uriel-assouline" target="_blank" rel="noopener" class="nav-cta">Prendre RDV</a>
   </div>
 </header>
 
@@ -271,7 +227,7 @@ footer a:hover { color: var(--or-champagne); }
       <div>
         <span class="section-badge">Épilation laser homme Nice</span>
         <h2>Pourquoi de plus en plus d'hommes choisissent l'épilation laser à Nice</h2>
-        <p>Sur la Côte d'Azur, la vie en bord de mer et les sports nautiques rendent la pilosité abondante particulièrement contraignante. Mais au-delà de l'esthétique, les hommes consultent pour des raisons très concrètes (pour l'épilation féminine, voir notre page <a href="/epilation-laser-nice.html">épilation laser à Nice</a>) :</p>
+        <p>Sur la Côte d'Azur, la vie en bord de mer et les sports nautiques rendent la pilosité abondante particulièrement contraignante. Mais au-delà de l'esthétique, les hommes consultent pour des raisons très concrètes :</p>
         <ul class="avantages">
           <li><strong>Poils incarnés & irritations</strong> : le rasage quotidien du cou provoque inflammations, boutons et micro-infections. L'épilation laser est la solution définitive.</li>
           <li><strong>Gain de temps</strong> : ne plus raser son dos chaque semaine représente des heures économisées annuellement</li>
@@ -455,17 +411,6 @@ footer a:hover { color: var(--or-champagne); }
     <div class="disclaimer" style="margin-top:3rem; max-width:800px; margin-left:auto; margin-right:auto;">
       Conformément aux recommandations du CNOM, les résultats présentés sont indicatifs et varient selon chaque patient. Une consultation médicale préalable est indispensable avant toute séance d'épilation laser.
     </div>
-  </div>
-</section>
-
-
-<section id="autres-soins">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-badge">À découvrir aussi</span>
-      <h2>Nos autres soins à Nice</h2>
-    </div>
-    <div class="related"><a href="/epilation-laser-nice.html"><strong>Épilation laser</strong><span>Femme & homme, tous phototypes</span></a><a href="/detatouage-laser-nice.html"><strong>Détatouage PicoLaser</strong><span>Tatouages noirs, couleurs, sourcils</span></a><a href="/greffe-de-cheveux-nice.html"><strong>Greffe de cheveux FUE</strong><span>Homme, femme, barbe, sourcils</span></a><a href="https://cliniquedelariviera.com" target="_blank" rel="noopener"><strong>Clinique de la Riviera</strong><span>Chirurgie &amp; médecine esthétique, centre du cheveu</span></a></div>
   </div>
 </section>
 
