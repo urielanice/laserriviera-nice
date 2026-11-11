@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#B76E79">
-<title>Laser Centre Nice | Dr Assouline — Hair Transplant, Laser, HIFU</title>
-<meta name="description" content="Medical laser centre in Nice. Laser hair removal, FUE hair transplant, PicoLaser tattoo removal, HIFU, MiraDry. Medical supervision, certified technology. Clinique Laser de la Riviera.">
+<title>Clinique Laser Nice — Épilation, Détatouage, Greffe FUE</title>
+<meta name="description" content="Centre laser médical à Nice, Carré d&#x27;Or : épilation laser, détatouage PicoLaser, greffe de cheveux FUE, HIFU, Hydrafacial. Supervision du Dr Assouline.">
 <link rel="canonical" href="https://laserriviera-nice.fr/">
 <link rel="alternate" hreflang="fr" href="https://laserriviera-nice.fr/">
 <link rel="alternate" hreflang="en" href="https://laserriviera-nice.fr/?lang=en">
@@ -260,6 +260,8 @@ footer { background:var(--noir-charbon); color:rgba(255,255,255,0.7); padding:3r
 .footer-bottom { padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-size:0.82rem; color:rgba(255,255,255,0.5); }
 .footer-bottom a { color:rgba(255,255,255,0.7); margin-left:1rem; }
 @media(max-width:768px){ .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;} }
+.footer-grid > div{min-width:0;overflow-wrap:anywhere;}
+@media(max-width:480px){ .footer-grid{grid-template-columns:1fr;} }
 
 /* COOKIE */
 .cookie-banner { position:fixed; bottom:1rem; left:1rem; right:1rem; max-width:500px; margin-left:auto; background:white; padding:1.5rem; border-radius:12px; box-shadow:var(--ombre-forte); z-index:999; font-size:0.88rem; line-height:1.6; display:none; }
@@ -736,6 +738,7 @@ function setLang(lang) {
   localStorage.setItem('lang', lang);
   // Update meta for SEO
   document.documentElement.lang = lang;
+  document.title = lang === 'en' ? 'Laser Centre Nice | Dr Assouline — Hair Transplant, Laser, HIFU' : 'Clinique Laser Nice — Épilation, Détatouage, Greffe FUE';
 }
 // Init from localStorage or browser
 const savedLang = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
