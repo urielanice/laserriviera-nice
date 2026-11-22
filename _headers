@@ -1,0 +1,17 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+# Copie du site greffecheveux-nice.fr : éviter le contenu dupliqué sur ce domaine
+/site-greffe-cheveux-nice/*
+  X-Robots-Tag: noindex
+
+/avant-apres/*
+  Cache-Control: public, max-age=2592000
+
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
